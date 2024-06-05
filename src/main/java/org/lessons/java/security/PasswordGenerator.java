@@ -1,5 +1,7 @@
 package org.lessons.java.security;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class PasswordGenerator {
@@ -11,7 +13,7 @@ public class PasswordGenerator {
 		String userColor;
 		short userDay;
 		short userMonth;
-		short userEar;
+		short userYear;
 		
 		Scanner input = new Scanner(System.in); 
 		
@@ -21,16 +23,36 @@ public class PasswordGenerator {
 	    userSurname = input.nextLine();  
 	    System.out.println("Inserisci il tuo Colore Preferito");
 	    userColor = input.nextLine();  
+	    
+	    System.out.println("----------------- Chiedo giorno, mese, anno separatamente ---------------------------");
+	    
 	    System.out.println("Inserisci Giorno di nascita:");
 	    userDay = (short) input.nextInt(); 
 	    System.out.println("Inserisci Mese di nascita:");
 	    userMonth = (short) input.nextInt(); 
 	    System.out.println("Inserisci Anno di nascita:");
-	    userEar = (short) input.nextInt(); 
+	    userYear = (short) input.nextInt(); 
 	    
-	    System.out.println(userName+"-"+userSurname+"-"+userColor+"-"+ (userDay+userMonth+userEar));
+	    System.out.println(userName+"-"+userSurname+"-"+userColor+"-"+ (userDay+userMonth+userYear));
 	    
+	    System.out.println("--------------------------------------------");
 	    
+	    System.out.println("Richiedo la data in un'unica soluzione Stringa");
+	    
+	    System.out.println("----------------- Usando un Array ---------------------------");
+	    
+	    String userDate;
+	    
+	    System.out.println("Inserisci Data di nascita: (mm/gg/aaaa)");
+	    userDate = input.nextLine(); 
+	    
+	    String[] userDateValues = userDate.split("/");
+	    
+        userDay = (short) Integer.parseInt(userDateValues[0]);
+        userMonth = (short) Integer.parseInt(userDateValues[1]);
+        userYear = (short) Integer.parseInt(userDateValues[2]);
+	    
+        System.out.println(userName+"-"+userSurname+"-"+userColor+"-"+ (userDay+userMonth+userYear));
 		
 		
 	}
