@@ -17,33 +17,37 @@ public class PasswordGenerator {
 		
 		Scanner input = new Scanner(System.in); 
 		
-	    System.out.println("Inserisci il tuo Nome");
+		System.out.println("-------------------------------------------------------------------------------------");
+		System.out.println("-------------------------- Generiamo la tua password --------------------------------");
+		System.out.println("-------------------------------------------------------------------------------------");
+		
+	    System.out.println("-- Inserisci il tuo Nome");
 	    userName = input.nextLine();  
-	    System.out.println("Inserisci il tuo Cognome:");
+	    System.out.println("-- Inserisci il tuo Cognome:");
 	    userSurname = input.nextLine();  
-	    System.out.println("Inserisci il tuo Colore Preferito");
+	    System.out.println("-- Inserisci il tuo Colore Preferito:");
 	    userColor = input.nextLine();  
 	    
-	    System.out.println("----------------- Chiedo giorno, mese, anno separatamente ---------------------------");
+	    System.out.println("-------------------- Chiedo giorno, mese, anno separatamente -------------------------");
 	    
-	    System.out.println("Inserisci Giorno di nascita:");
+	    System.out.println("-- Inserisci Giorno di nascita:");
 	    userDay = (short) input.nextInt(); 
-	    System.out.println("Inserisci Mese di nascita:");
+	    System.out.println("-- Inserisci Mese di nascita:");
 	    userMonth = (short) input.nextInt(); 
-	    System.out.println("Inserisci Anno di nascita:");
+	    System.out.println("-- Inserisci Anno di nascita:");
 	    userYear = (short) input.nextInt(); 
 	    
 	    System.out.println(userName+"-"+userSurname+"-"+userColor+"-"+ (userDay+userMonth+userYear));
 	    
-	    System.out.println("--------------------------------------------");
+		System.out.println("-------------------------------------------------------------------------------------");
 	    
-	    System.out.println("Richiedo la data in un'unica soluzione Stringa");
+	    System.out.println("----------------- Richiedo la data in un'unica soluzione Stringa --------------------");
 	    
-	    System.out.println("----------------- Usando un Array ---------------------------");
+	    System.out.println("--------------------------------- Usando un Array -----------------------------------");
 	    
 	    String userDate;
 	    
-	    System.out.println("Inserisci Data di nascita: (mm/gg/aaaa)");
+	    System.out.println("-- Inserisci Data di nascita: (mm/gg/aaaa)");
 	    userDate = input.nextLine(); 
 	    
 	    String[] userDateValues = userDate.split("/");
@@ -53,6 +57,8 @@ public class PasswordGenerator {
         userYear = (short) Integer.parseInt(userDateValues[2]);
 	    
         System.out.println(userName+"-"+userSurname+"-"+userColor+"-"+ (userDay+userMonth+userYear));
+        
+		System.out.println("-------------------------------------------------------------------------------------");
 		
 		
 	}
